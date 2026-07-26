@@ -1,326 +1,89 @@
 # AetherOS
 
-**The Next Generation Android Desktop Ecosystem**
+**Turn your Android phone into a full desktop experience.**
 
-> **Your Phone. Reimagined as a Desktop Operating System.**
-
----
-
-## Executive Vision
-
-AetherOS is a next-generation desktop ecosystem that transforms Android devices into a complete desktop computing environment. It is not a basic mirroring utility. Instead, it is an intelligent platform that integrates Android with Windows, Linux, and macOS while delivering desktop-grade multitasking, AI-powered workflows, and seamless cross-device experiences.
-
-The goal is to remove boundaries between phone and computer so users can interact with Android as a true desktop operating system.
+AetherOS lets you run Android in a desktop-style environment on Windows and Linux with bundled ADB, guided boot checks, and a production-ready workflow.
 
 ---
 
-## Mission
+## Download & Run
 
-Build the world’s most advanced Android desktop platform by unifying:
+### 🪟 Windows
 
-- Android Desktop Mode
-- Remote Device Management
-- Wireless Connectivity
-- AI Assistance
-- Cloud Synchronization
-- File Management
-- Productivity Tools
-- Multi-device Collaboration
-
-into one premium experience.
-
----
-
-## Vision Statement
-
-> **One Device. Infinite Workspace.**
-
-- Your phone becomes your computer.
-- Your computer becomes your Android desktop.
-- Everything works together.
-
----
-
-## Core Philosophy
-
-Instead of asking **“How can we mirror a phone?”**, AetherOS asks:
-
-> **“How can we make Android feel like a real desktop operating system?”**
-
----
-
-## Problems AetherOS Solves
-
-Today, users rely on separate tools for separate jobs (DeX, Phone Link, AirDroid, scrcpy, Nearby Share, KDE Connect, and more). AetherOS combines these fragmented workflows into one unified platform.
-
----
-
-## High-Level Architecture
-
-```text
-Android Phone
-│
-├── Screen Service
-├── Audio Engine
-├── Notification Engine
-├── Accessibility Service
-├── Clipboard Manager
-├── File Server
-├── SMS Service
-├── Contacts Service
-├── Camera Service
-├── AI Client
-└── Device Manager
-        │
-──────── Secure Communication Layer ────────
-        │
-Windows / Linux / macOS
-│
-├── Desktop Shell
-├── Window Manager
-├── Dock
-├── Notification Centre
-├── Widget Engine
-├── Theme Engine
-├── AI Engine
-├── Plugin Manager
-├── Cloud Sync
-├── File Explorer
-├── App Launcher
-├── Phone Manager
-└── Settings
+```bash
+android_dex_win.exe --usb
 ```
+Force USB connection only.
+
+```bash
+android_dex_win.exe 192.168.1.100
+```
+Connect via IP address.
+
+```bash
+android_dex_win.exe 192.168.1.100:5555
+```
+Connect via IP and custom port.
+
+### 🐧 Linux
+
+| Step | Command | Description |
+|------|---------|-------------|
+| 1 | `cd android_dex_linux/` | Enter the extracted folder |
+| 2 | `chmod +x run_android_dex.sh` | Make the script executable |
+| 3 | `./run_android_dex.sh` | Launch Android DEX |
+
+The Linux launcher auto-checks compatibility (drivers, graphics, and required dependencies) before startup.
 
 ---
 
-## Companion Android Application
+## 🛠️ How It Works — Handshake Protocol
 
-The Android companion app securely exposes device capabilities to desktop clients.
+AetherOS uses a three-layer architecture with a cryptographic-style handshake before unlocking the desktop UI.
 
-### Screen Capture
+- Layer 1: Device channel readiness
+- Layer 2: Service and runtime integrity checks
+- Layer 3: Desktop session unlock
 
-- MediaProjection-based capture
-- 60 / 90 / 120 FPS targets
-- Adaptive bitrate
-- Hardware encoding
-
-### Audio Engine
-
-- Internal audio capture
-- Stereo / microphone / app-specific audio
-- Bluetooth audio
-- Audio mixing
-
-### Accessibility Engine
-
-- Mouse control
-- Keyboard input
-- Scrolling and gestures
-- Drag operations
-
-### Device Services
-
-- Battery, CPU, RAM, temperature, storage
-- Sensors, camera, Bluetooth, Wi-Fi
+The desktop unlocks only after every layer confirms readiness.
 
 ---
 
-## Desktop Client
+## 📋 Getting Started
 
-Cross-platform desktop experience built with **Flutter** + native performance modules.
+### Prerequisites
 
-### Core Components
+- **OS:** Windows 10+ or modern Linux (Ubuntu, Fedora, etc.)
+- **Device:** Android 8.0+
+- **Drivers:** ADB is bundled (no separate install required)
 
-- **Desktop Shell**: wallpaper, dock, widgets, taskbar, desktop icons, notification center
-- **Window Manager**: per-app windows, resize/snap/minimize/maximize, virtual desktops, multi-monitor
-- **Dock**: live previews, running indicators, folders, recent apps, animations
-- **Widget Engine**: weather, calendar, battery, RAM, CPU, downloads, music, notes, clipboard, device status
+### Step-by-Step
 
----
+1. **Enable Developer Options**
+   - Settings → About Phone → tap **Build Number** 7 times
+2. **Enable USB Debugging**
+   - Settings → Developer Options → USB Debugging → **ON**
+3. Plug in your phone for USB mode, or enable Wireless Debugging for Wi-Fi mode
+4. Launch Android DEX and wait for boot progress to reach 100%
+5. Desktop unlocks and your Android session is ready
 
-## AI Integration (Aether AI)
-
-Capabilities include:
-
-- Open apps
-- File search
-- Notification summarization
-- OCR and translation
-- Voice commands
-- Automation and smart suggestions
-
-Example:
-
-> “Open WhatsApp and reply to the latest message.”
+If connection fails, use the **Select Device** button on the boot screen to open ADB Manager and choose the target device without restarting.
 
 ---
 
-## Core Experience Areas
+## ✅ Fully Functional Build
 
-### Screen Mirroring
-
-- USB / Wi-Fi / LAN support
-- H.264 / H.265
-- GPU and hardware acceleration
-- Adaptive bitrate
-- Target latency: **~20 ms (USB)**, **~30–50 ms (Wi-Fi)**
-
-### Desktop Mode
-
-Each Android app runs as its own desktop window (e.g., Chrome, WhatsApp, Telegram, Spotify, Files, Maps).
-
-### File Management
-
-- Drag-and-drop
-- Shared clipboard
-- Shared folders
-- Wireless transfer
-- Folder sync + automatic backup
-
-### Notification Centre
-
-Interactive notifications with reply/delete/archive/mute/call-back/open actions.
-
-### Clipboard Sync
-
-Instant copy/paste across Android and desktop in both directions.
-
-### Theme Engine
-
-- VisionOS, Windows, Nothing, Material You, AMOLED, custom themes
-- User theme creation and sharing
-
-### Plugin Marketplace
-
-Extensible integrations (Discord, OBS, Spotify, Adobe, VS Code, ChatGPT, IoT, etc.).
-
-### Security
-
-- Encrypted communication
-- QR pairing + device authentication
-- Local-network encryption
-- Permission management
-- Biometric approval
-- Device trust list
-
-### Cloud
-
-- Settings/theme/wallpaper/plugin sync
-- Device history
-- Encrypted backups
-
-### Gaming Mode
-
-- Controller support
-- Keyboard mapping
-- Mouse lock
-- Performance optimizations
-- High refresh + macro profiles
-
-### Productivity Mode
-
-- Calendar, notes, tasks, sticky notes, whiteboard
-- Meeting mode, focus mode, Pomodoro timer
-
-### Developer Tools
-
-- ADB terminal
-- Logcat
-- APK installer
-- Package manager
-- Performance monitor
-- Device explorer
-- Shell console
+AetherOS is distributed as a ready-to-run build focused on performance and stability, including startup checks to validate runtime requirements before desktop launch.
 
 ---
 
-## Technology Stack
+## Screenshots
 
-### Desktop
-
-- Flutter, Dart
-- Rust, C++
-- FFmpeg, SDL
-- OpenGL / Vulkan
-
-### Android
-
-- Kotlin, Jetpack
-- MediaProjection API
-- Accessibility Service
-- CameraX
-
-### Optional Backend
-
-- Go or Rust
-- PostgreSQL, Redis
-- WebSocket, gRPC
-
-### AI
-
-- Ollama
-- OpenAI-compatible APIs
-- Optional ONNX Runtime local models
+![AetherOS Screenshot 1](https://github.com/user-attachments/assets/9fde403f-3d3d-4abd-be63-de63ba3462e1)
+![AetherOS Screenshot 2](https://github.com/user-attachments/assets/0369d23a-a4b5-49d1-8288-8da6355d935d)
+![AetherOS Screenshot 3](https://github.com/user-attachments/assets/92b416fe-b125-4ee3-ba89-a857bf48b203)
+![AetherOS Screenshot 4](https://github.com/user-attachments/assets/0159d7c6-11fa-45f9-938e-e629703006f0)
 
 ---
 
-## Development Roadmap
-
-### Phase 1 — Foundation
-
-- Modern desktop UI
-- Device pairing
-- Low-latency mirroring
-- Keyboard/mouse control
-- File transfer
-
-### Phase 2 — Desktop Experience
-
-- Multi-window Android apps
-- Notification sync
-- Clipboard sync
-- Drag-and-drop
-- Widget engine
-
-### Phase 3 — Smart Features
-
-- Calls and SMS
-- AI assistant
-- Theme engine
-- Plugin system
-- Performance dashboard
-
-### Phase 4 — Ecosystem
-
-- Cloud sync
-- Multi-device management
-- Team collaboration
-- Remote internet access
-- Marketplace
-- Enterprise features
-
----
-
-## Long-Term Direction
-
-AetherOS aims to become a complete personal computing ecosystem where:
-
-- The phone is the brain
-- The desktop is the workspace
-- The cloud is the memory
-- AI is the assistant
-
-Future product family vision:
-
-- AetherOS (main platform)
-- Aether Connect
-- Aether Sync
-- Aether AI
-- Aether Cloud
-- Aether Studio
-- Aether Hub
-- Aether Store
-- Aether Shield
-- Aether Link
-
-AetherOS is built to go **beyond screen mirroring and beyond desktop mode** toward a universal, persistent, intelligent computing platform.
+**Engineered for performance. Optimized for productivity.**
