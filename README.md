@@ -17,13 +17,35 @@ AetherOS is an Android desktop operating platform focused on modular architectur
 - `/design-system` - Shared design tokens and component guidelines
 - `/shared` - Shared models, protocols, constants, and utilities
 
-## Current Status
+## Starter Implementations Added
 
-This repository currently provides the initial implementation scaffold aligned with the AetherOS platform plan. Module internals will be implemented incrementally across roadmap phases.
+- Desktop shell executable starter (Flutter):
+  - `/home/runner/work/AetherOS/AetherOS/desktop/shell/flutter_app`
+- Android companion app starter (Android/Kotlin):
+  - `/home/runner/work/AetherOS/AetherOS/android/app/companion`
+- Backend API starter with tests (Node.js):
+  - `/home/runner/work/AetherOS/AetherOS/backend/api/service`
+- Shared protocol contracts starter:
+  - `/home/runner/work/AetherOS/AetherOS/shared/protocols/contracts`
 
-## Next Steps
+## Quick Run Commands
 
-1. Scaffold desktop shell implementation in `/desktop/shell`
-2. Scaffold Android companion baseline in `/android/app`
-3. Define shared protocol contracts in `/shared/protocols`
-4. Introduce CI and test workflows after first executable modules are added
+### Backend API
+```bash
+cd /home/runner/work/AetherOS/AetherOS/backend/api/service
+npm test
+npm start
+```
+
+### Desktop Shell (requires Flutter SDK)
+```bash
+cd /home/runner/work/AetherOS/AetherOS/desktop/shell/flutter_app
+flutter pub get
+flutter run -d windows
+```
+
+### Android Companion (requires Android SDK + Java 17)
+```bash
+cd /home/runner/work/AetherOS/AetherOS/android/app/companion
+gradle assembleDebug
+```

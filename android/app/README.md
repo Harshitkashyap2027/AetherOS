@@ -1,3 +1,6 @@
 # Android Companion App
 
-Main Android application containing permissions, service startup, and module orchestration.
+Main Android companion workspace.
+
+## Starter App
+- `/home/runner/work/AetherOS/AetherOS/android/app/companion` contains the first Android 10+ starter app skeleton.
