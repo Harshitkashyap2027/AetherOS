@@ -49,3 +49,14 @@ flutter run -d windows
 cd /home/runner/work/AetherOS/AetherOS/android/app/companion
 gradle assembleDebug
 ```
+
+## Project Output Results
+
+### Backend API Lint Result
+![Backend API lint result](docs/images/results/backend-lint-result.svg)
+
+### Backend API Test Result
+![Backend API test result](docs/images/results/backend-test-result.svg)
+
+### Backend API Run Result
+![Backend API run result](docs/images/results/backend-run-result.svg)
