@@ -1,0 +1,15 @@
+{
+  "name": "aetheros-backend-api",
+  "version": "0.1.0",
+  "description": "AetherOS backend API starter service",
+  "type": "module",
+  "main": "src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test",
+    "lint": "node --check src/server.mjs test/server.test.mjs"
+  },
+  "keywords": ["aetheros", "backend", "api"],
+  "author": "",
+  "license": "MIT"
+}

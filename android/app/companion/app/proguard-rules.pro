@@ -1,0 +1,1 @@
+# Companion starter proguard rules
