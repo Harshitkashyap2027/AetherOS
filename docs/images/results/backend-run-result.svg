@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
+  <rect width="1200" height="210" fill="#0d1117"/>
+  <text x="20" y="45" fill="#c9d1d9" font-family="monospace" font-size="21">$ npm start</text>
+  <text x="20" y="80" fill="#7ee787" font-family="monospace" font-size="19">AetherOS backend API listening on 8080</text>
+  <text x="20" y="120" fill="#c9d1d9" font-family="monospace" font-size="19">$ curl http://127.0.0.1:8080/health</text>
+  <text x="20" y="155" fill="#58a6ff" font-family="monospace" font-size="19">{"status":"ok","service":"aetheros-backend-api"}</text>
+  <text x="20" y="190" fill="#58a6ff" font-family="monospace" font-size="19">Exit code: 0</text>
+</svg>

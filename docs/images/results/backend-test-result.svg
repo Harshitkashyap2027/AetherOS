@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330">
+  <rect width="1200" height="330" fill="#0d1117"/>
+  <text x="20" y="40" fill="#c9d1d9" font-family="monospace" font-size="21">$ npm test</text>
+  <text x="20" y="75" fill="#7ee787" font-family="monospace" font-size="19">&gt; aetheros-backend-api@0.1.0 test</text>
+  <text x="20" y="105" fill="#7ee787" font-family="monospace" font-size="19">&gt; node --test</text>
+  <text x="20" y="140" fill="#58a6ff" font-family="monospace" font-size="19">✔ GET /health returns service status (16.889508ms)</text>
+  <text x="20" y="175" fill="#c9d1d9" font-family="monospace" font-size="19">ℹ tests 1 | pass 1 | fail 0 | skipped 0</text>
+  <text x="20" y="210" fill="#c9d1d9" font-family="monospace" font-size="19">ℹ duration_ms 90.513235</text>
+  <text x="20" y="250" fill="#58a6ff" font-family="monospace" font-size="19">Exit code: 0</text>
+</svg>
